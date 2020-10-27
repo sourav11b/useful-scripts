@@ -1,0 +1,1 @@
+ nodetool tablestats baselines | grep "Table:\|Space used (live):\|Space used (total):" | awk -F': ' '{print $2}' | awk '{ORS=NR%3?",":"\n"}1' RS="\n" | awk -F',' '{sum+=$3;}END{print sum/1024;}'
