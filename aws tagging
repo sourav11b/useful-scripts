@@ -1,0 +1,12 @@
+Get running instances for a cluster ( that you created using ctool )
+
+aws ec2 describe-instances --query 'Reservations[].Instances[].InstanceId' --filters Name=instance-state-name,Values=running "Name=tag:cluster_name,Values=<cluster_name>"
+
+Install aws tagger
+
+https://github.com/washingtonpost/aws-tagger
+
+Run the following command to tag all those isntances ( sample script )
+
+aws-tagger --resource i-041ef83513a8acfb2 --resource i-0c2819fe35e586734 --resource i-0e850de3d0c49f008 --resource i-0273d2f6c53a5f2b0  --resource i-09f79dae19f033515 --resource i-0cbf4f68c56b61d0d --tag "Purpose:Fiserv Custom LBP Deliverable" --tag "create_user:Sourav Biswas" --tag "project:Fiserv / First Data" --tag "NeedUntil:11/09/2020" 
+
