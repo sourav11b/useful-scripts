@@ -1,0 +1,9 @@
+val newIdDF = g.V().hasLabel("person")
+	.toDF()
+	.withColumn("newId", 
+		g.idColumn(lit("person_2"), col("personId"), col("name")))
+	.select($"id", $"newId")
+val edges = g.V().hasLabel("person").outE("created").toDF()
+val joinedDf = newIdDF.join(edges.drop("id"), col("id") === col("src"))
+val newEdges = joinedDf.select($"newId" as "src", $"dst", $"~label")
+g.updateEdges(newEdges)
