@@ -1,0 +1,30 @@
+is there any way of downloading DSE 4.8 tarball? our downloads page does not have it anymore
+New
+
+ZJeremiah Jordan (he/him)  10:26 AM
+@sourav.biswas take the URL for 5.x/6.x release and change the version number to the one you want
+:thank_you:
+1
+
+10:26
+I think 4.8.16 was the final 4.8.x if you want latest
+
+Sourav Biswas(he/him/his)  10:27 AM
+awesome, it worked :slightly_smiling_face:
+:+1:
+1
+
+
+ZJeremiah Jordan (he/him)  10:27 AM
+so like get https://downloads.datastax.com/enterprise/dse-6.8.9-bin.tar.gz from the downloads page
+Change to https://downloads.datastax.com/enterprise/dse-4.8.16-bin.tar.gz
+:thank_you:
+1
+
+10:28
+releases back to 4.5 are still on the server, we just don't link them
+10:28
+anything before 4.5 you have to get from an internal archive
+:thank_you:
+1
+
